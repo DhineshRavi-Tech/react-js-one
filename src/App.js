@@ -127,6 +127,12 @@ const Command = ({ id, onExecute }) => {
   );
 };
 
+const availableValues = {
+  product: globalSalesValues.product,
+  region: globalSalesValues.region,
+  customer: globalSalesValues.customer,
+};
+
 export default function App() {
   return <p>Hi</p>;
 }
