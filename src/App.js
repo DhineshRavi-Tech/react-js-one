@@ -118,6 +118,15 @@ const commandComponents = {
   cancel: CancelButton,
 };
 
+const Command = ({ id, onExecute }) => {
+  const CommandButton = commandComponents[id];
+  return (
+    <CommandButton
+      onExecute={onExecute}
+    />
+  );
+};
+
 export default function App() {
   return <p>Hi</p>;
 }
