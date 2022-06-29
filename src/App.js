@@ -110,6 +110,14 @@ const CancelButton = ({ onExecute }) => (
   </IconButton>
 );
 
+const commandComponents = {
+  add: AddButton,
+  edit: EditButton,
+  delete: DeleteButton,
+  commit: CommitButton,
+  cancel: CancelButton,
+};
+
 export default function App() {
   return <p>Hi</p>;
 }
