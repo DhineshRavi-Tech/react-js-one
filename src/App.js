@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
-import DataGridLocal from './DataGridLocal';
+import { generateRows, globalSalesValues } from './generator';
 
 export default function App() {
-  return <DataGridLocal></DataGridLocal>;
+  return <p>Hi</p>;
 }
