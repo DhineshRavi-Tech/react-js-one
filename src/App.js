@@ -64,6 +64,52 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
+const AddButton = ({ onExecute }) => (
+  <div style={{ textAlign: 'center' }}>
+    <Button color="primary" onClick={onExecute} title="Create new row">
+      New
+    </Button>
+  </div>
+);
+
+const EditButton = ({ onExecute }) => (
+  <IconButton onClick={onExecute} title="Edit row" size="large">
+    <EditIcon />
+  </IconButton>
+);
+
+const DeleteButton = ({ onExecute }) => (
+  <IconButton
+    onClick={() => {
+      // eslint-disable-next-line
+      if (window.confirm('Are you sure you want to delete this row?')) {
+        onExecute();
+      }
+    }}
+    title="Delete row"
+    size="large"
+  >
+    <DeleteIcon />
+  </IconButton>
+);
+
+const CommitButton = ({ onExecute }) => (
+  <IconButton onClick={onExecute} title="Save changes" size="large">
+    <SaveIcon />
+  </IconButton>
+);
+
+const CancelButton = ({ onExecute }) => (
+  <IconButton
+    color="secondary"
+    onClick={onExecute}
+    title="Cancel changes"
+    size="large"
+  >
+    <CancelIcon />
+  </IconButton>
+);
+
 export default function App() {
   return <p>Hi</p>;
 }
