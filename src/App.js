@@ -42,6 +42,28 @@ import { PercentTypeProvider } from '../../../theme-sources/material-ui/componen
 
 import { generateRows, globalSalesValues } from './generator';
 
+const PREFIX = 'Demo';
+const classes = {
+  lookupEditCell: `${PREFIX}-lookupEditCell`,
+  dialog: `${PREFIX}-dialog`,
+  inputRoot: `${PREFIX}-inputRoot`,
+  selectMenu: `${PREFIX}-selectMenu`,
+};
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${classes.lookupEditCell}`]: {
+    padding: theme.spacing(1),
+  },
+  [`& .${classes.dialog}`]: {
+    width: 'calc(100% - 16px)',
+  },
+  [`& .${classes.inputRoot}`]: {
+    width: '100%',
+  },
+  [`& .${classes.selectMenu}`]: {
+    position: 'absolute !important',
+  },
+}));
+
 export default function App() {
   return <p>Hi</p>;
 }
