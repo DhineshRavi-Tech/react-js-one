@@ -317,6 +317,7 @@ export function generateRows({
   length,
   random = randomSeed(329972281),
 }) {
+  debugger;
   const data = [];
   const columns = Object.keys(columnValues);
 
